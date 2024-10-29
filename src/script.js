@@ -1,51 +1,55 @@
-// Cape Town
-let capeTownElement = document.getElementById("cape-town");
-if (capeTownElement) {
-  let capeTownDateElement = capeTownElement.querySelector(".date");
-  let capeTownTimeElement = capeTownElement.querySelector(".time");
-  let capeTownTime = moment().tz("Africa/Cape_Town");
+function updateTime() {
+  // Cape Town
+  let capeTownElement = document.getElementById("cape-town");
+  if (capeTownElement) {
+    let capeTownDateElement = capeTownElement.querySelector(".date");
+    let capeTownTimeElement = capeTownElement.querySelector(".time");
+    let capeTownTime = moment().tz("Africa/Cape_Town");
 
-  capeTownDateElement.innerHTML = capeTownTime.format("D, MMMM , YYYY");
-  capeTownTimeElement.innerHTML = capeTownTime.format(
-    "h:mm:ss [<small>]A[</small>]"
-  );
-}
+    capeTownDateElement.innerHTML = capeTownTime.format("D, MMMM , YYYY");
+    capeTownTimeElement.innerHTML = capeTownTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
 
-// Mexico City
-let mexicoCityElement = document.getElementById("mexico-city");
-if (mexicoCityElement) {
-  let mexicoCityDateElement = mexicoCityElement.querySelector(".date");
-  let mexicoCityTimeElement = mexicoCityElement.querySelector(".time");
-  let mexicoCityTime = moment().tz("America/Mexico_City");
+  // Mexico City
+  let mexicoCityElement = document.getElementById("mexico-city");
+  if (mexicoCityElement) {
+    let mexicoCityDateElement = mexicoCityElement.querySelector(".date");
+    let mexicoCityTimeElement = mexicoCityElement.querySelector(".time");
+    let mexicoCityTime = moment().tz("America/Mexico_City");
 
-  mexicoCityDateElement.innerHTML = mexicoCityTime.format("D, MMMM , YYYY");
-  mexicoCityTimeElement.innerHTML = mexicoCityTime.format(
-    "h:mm:ss [<small>]A[</small>]"
-  );
-}
+    mexicoCityDateElement.innerHTML = mexicoCityTime.format("D, MMMM , YYYY");
+    mexicoCityTimeElement.innerHTML = mexicoCityTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
 
-// Sydney
-let sydneyElement = document.getElementById("sydney");
-if (sydneyElement) {
-  let sydneyDateElement = sydneyElement.querySelector(".date");
-  let sydneyTimeElement = sydneyElement.querySelector(".time");
-  let sydneyTime = moment().tz("Australia/Sydney");
+  // Sydney
+  let sydneyElement = document.getElementById("sydney");
+  if (sydneyElement) {
+    let sydneyDateElement = sydneyElement.querySelector(".date");
+    let sydneyTimeElement = sydneyElement.querySelector(".time");
+    let sydneyTime = moment().tz("Australia/Sydney");
 
-  sydneyDateElement.innerHTML = sydneyTime.format("D, MMMM , YYYY");
-  sydneyTimeElement.innerHTML = sydneyTime.format(
-    "h:mm:ss [<small>]A[</small>]"
-  );
-}
+    sydneyDateElement.innerHTML = sydneyTime.format("D, MMMM , YYYY");
+    sydneyTimeElement.innerHTML = sydneyTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
 
-// Tokyo
-let tokyoElement = document.getElementById("tokyo");
-if (tokyoElement) {
-  let tokyoDateElement = tokyoElement.querySelector(".date");
-  let tokyoTimeElement = tokyoElement.querySelector(".time");
-  let tokyoTime = moment().tz("Asia/Tokyo");
+  // Tokyo
+  let tokyoElement = document.getElementById("tokyo");
+  if (tokyoElement) {
+    let tokyoDateElement = tokyoElement.querySelector(".date");
+    let tokyoTimeElement = tokyoElement.querySelector(".time");
+    let tokyoTime = moment().tz("Asia/Tokyo");
 
-  tokyoDateElement.innerHTML = tokyoTime.format("D, MMMM , YYYY");
-  tokyoTimeElement.innerHTML = tokyoTime.format("h:mm:ss [<small>]A[</small>]");
+    tokyoDateElement.innerHTML = tokyoTime.format("D, MMMM , YYYY");
+    tokyoTimeElement.innerHTML = tokyoTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
 }
 
 function updateCity(event) {
@@ -72,5 +76,5 @@ function updateCity(event) {
 updateTime();
 setInterval(updateTime, 1000);
 
-let citiesSelectElement = document.querySelector("#city");
+let citiesSelectElement = document.getElementById("#city-name");
 citiesSelectElement.addEventListener("change", updateCity);
