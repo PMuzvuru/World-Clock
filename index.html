@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>World Clock - Primrose Muzvuru</title>
     <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.37/moment-timezone-with-data-1970-2030.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -18,36 +20,38 @@
         <option value="">Lagos</option>
       </select>
 
-      <div class="city">
-        <div>
-          <h2>Cape Town</h2>
-          <div class="date">10 November 2024</div>
+      <div id="cities">
+        <div class="city" id="cape-town">
+          <div>
+            <h2>Cape Town</h2>
+            <div class="date"></div>
+          </div>
+          <div class="time"></div>
         </div>
-        <div class="time">1:48:15 <small>AM</small></div>
-      </div>
 
-      <div class="city">
-        <div>
-          <h2>Nairobi</h2>
-          <div class="date">10 November 2024</div>
+        <div class="city" id="mexico-city">
+          <div>
+            <h2>Mexico City</h2>
+            <div class="date"></div>
+          </div>
+          <div class="time"></div>
         </div>
-        <div class="time">1:48:15 <small>AM</small></div>
-      </div>
 
-      <div class="city">
-        <div>
-          <h2>Harare</h2>
-          <div class="date">10 November 2024</div>
+        <div class="city" id="sydney">
+          <div>
+            <h2>Sydney</h2>
+            <div class="date"></div>
+          </div>
+          <div class="time"></div>
         </div>
-        <div class="time">1:48:15 <small>AM</small></div>
-      </div>
 
-      <div class="city">
-        <div>
-          <h2>Lagos</h2>
-          <div class="date">10 November 2024</div>
+        <div class="city" id="tokyo">
+          <div>
+            <h2>Tokyo</h2>
+            <div class="date"></div>
+          </div>
+          <div class="time"></div>
         </div>
-        <div class="time">1:48:15 <small>AM</small></div>
       </div>
 
       <footer>
